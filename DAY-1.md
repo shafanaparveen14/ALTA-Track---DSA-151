@@ -62,3 +62,36 @@ public:
     }
 };
 <img width="1440" height="900" alt="Screenshot 2026-09-18 at 11 05 39 AM" src="https://github.com/user-attachments/assets/5591dc42-64b6-4c4e-be8e-39f645553071" />
+
+
+Question no.30 Valid Parentheses
+
+Solution :
+
+lass Solution {
+public:
+    bool isValid(string s) {
+        stack<char>st;
+        for(auto v:s){
+            if(v=='(' || v=='{'||v=='['){
+          st.push(v);
+            }
+            else{
+              if (st.empty()){
+                return false;
+              }
+              if((v == ')' && st.top() == '(') || (v == ']' && st.top() == '[')|| (v == '}' && st.top() == '{')){
+                st.pop();
+            }
+            else{
+                return false;
+            }
+        }
+        }
+    
+return st.size()==0;
+    }
+};
+
+<img width="1440" height="900" alt="Screenshot 2026-09-18 at 12 22 30 PM" src="https://github.com/user-attachments/assets/bcf084fd-2eab-426e-a001-7638234937cf" />
+
