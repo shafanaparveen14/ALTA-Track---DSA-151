@@ -131,3 +131,32 @@ public:
 <img width="1440" height="900" alt="Screenshot 2026-09-18 at 12 26 34 PM" src="https://github.com/user-attachments/assets/60bddb02-7488-4a4f-8366-d15639b631d6" />
 
 
+
+Question no. 45
+Leetcode question no. 704
+
+Solution :-
+
+class Solution {
+public:
+    int search(vector<int>& nums, int target) {
+        int left = 0;
+        int right = nums.size() -1;
+while(left<=right){
+        int mid = left + (right - left)/2;
+        if(nums[mid] == target){
+            return mid;
+        }
+        else if(nums[mid] < target){
+            left = mid +1;
+        }
+        else{
+            right = mid -1;
+        }
+       }
+       return -1;
+    }
+};
+
+
+<img width="1440" height="900" alt="Screenshot 2026-09-18 at 12 29 48 PM" src="https://github.com/user-attachments/assets/8936d5c6-58b8-46a2-9577-6445fe9e9a0b" />
