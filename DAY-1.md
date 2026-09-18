@@ -68,7 +68,7 @@ Question no.30 Valid Parentheses
 
 Solution :
 
-lass Solution {
+class Solution {
 public:
     bool isValid(string s) {
         stack<char>st;
@@ -94,4 +94,40 @@ return st.size()==0;
 };
 
 <img width="1440" height="900" alt="Screenshot 2026-09-18 at 12 22 30 PM" src="https://github.com/user-attachments/assets/bcf084fd-2eab-426e-a001-7638234937cf" />
+
+
+
+Question no. 44 Sort colors
+
+Solution:
+
+class Solution {
+public:
+    void sortColors(vector<int>& nums) {
+        int low = 0, mid = 0 ,high = nums.size()-1;
+        
+
+  while(mid <= high){
+            if(nums[mid]==0){
+                int temp = nums[mid];
+                nums[mid]=nums[low];
+                nums[low]=temp;
+                low++;
+                mid++;
+            }
+            else if(nums[mid] == 1){
+                mid++;
+            }
+            else{
+                int temp = nums[mid];
+                nums[mid] = nums[high];
+                nums[high]= temp;
+                high--;
+            }
+        }
+    }
+};
+
+<img width="1440" height="900" alt="Screenshot 2026-09-18 at 12 26 34 PM" src="https://github.com/user-attachments/assets/60bddb02-7488-4a4f-8366-d15639b631d6" />
+
 
