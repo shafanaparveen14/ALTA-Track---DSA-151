@@ -160,3 +160,20 @@ while(left<=right){
 
 
 <img width="1440" height="900" alt="Screenshot 2026-09-18 at 12 29 48 PM" src="https://github.com/user-attachments/assets/8936d5c6-58b8-46a2-9577-6445fe9e9a0b" />
+
+
+Question no.58 Kth Largest Element in an Array
+leetcode question no. 215
+
+Solution : 
+
+class Solution {
+public:
+    int findKthLargest(vector<int>& nums, int k) {
+        sort(nums.begin(), nums.end());
+        return nums[nums.size()-k];
+    }
+};
+
+<img width="1440" height="900" alt="Screenshot 2026-09-18 at 12 33 47 PM" src="https://github.com/user-attachments/assets/9d3001a8-ec65-443d-a809-a4466ad3b2ab" />
+
